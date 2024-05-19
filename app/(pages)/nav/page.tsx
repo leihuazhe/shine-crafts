@@ -7,13 +7,14 @@ import getNavLinks, { CategoryWithLinks } from "@/app/links";
 
 export default async function IndexPage() {
   const navResources: CategoryWithLinks = await getNavLinks();
-  const navItems = navResources.map(n => {
+  const navItems = navResources.map((n: { title: string; icon: string; id: string }) => {
     return {
       title: n.title,
       icon: n.icon,
       id: n.id,
     }
   })
+
   return <div className="container relative mx-auto min-h-screen w-full px-0">
     <div className="flex">
       <div className="fixed z-20 hidden min-h-screen w-[16rem] transition-all duration-300 ease-in-out sm:block ">
