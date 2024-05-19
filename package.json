@@ -12,8 +12,7 @@
     "typecheck": "tsc --noEmit",
     "seed": "node ./prisma/seed.js",
     "format:write": "prettier --write \"**/*.{ts,tsx,mdx}\" --cache",
-    "format:check": "prettier --check \"**/*.{ts,tsx,mdx}\" --cache",
-    "postinstall": "prisma generate"
+    "format:check": "prettier --check \"**/*.{ts,tsx,mdx}\" --cache"
   },
   "dependencies": {
     "@heroicons/react": "^2.1.3",
