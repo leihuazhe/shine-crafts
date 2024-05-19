@@ -8,6 +8,13 @@
     -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
   }
 
+  @media (prefers-color-scheme: light) {
+    .home-style {
+      --bg-color: red;
+      --text-color: white;
+    }
+  }
+
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 47.4% 11.2%;

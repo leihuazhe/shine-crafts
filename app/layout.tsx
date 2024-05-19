@@ -52,7 +52,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
             sansFont.variable
           )}
         >
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
             <SHeader navItems={navItems} user={user} />
             {children}
             {/* <TailwindIndicator /> */}
