@@ -110,7 +110,7 @@ const TTS = () => {
                   RHAP_UI.CURRENT_TIME,
                   RHAP_UI.PROGRESS_BAR,
                   RHAP_UI.DURATION,
-                  <a className="pl-2" key={audioUrl} href={audioUrl} download={`${text.trim().slice(0, Math.min(10, text.length))}.mp3`}><DownloadIcon /></a>,
+                  <a className="pl-2" key={audioUrl} href={audioUrl} download={`${text.trim().slice(0, Math.min(30, text.length))}.mp3`}><DownloadIcon /></a>,
                 ]}
             />
           </div>
