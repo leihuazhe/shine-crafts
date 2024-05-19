@@ -3,7 +3,7 @@ import { SiteFooter } from "@/components/site-footer"
 import { LinkContent } from "@/components/link-content"
 import getNavLinks from "@/app/links";
 
-export const revalidate = 24 * 60 * 60;
+// export const revalidate = 24 * 60 * 60;
 
 export default async function IndexPage() {
   const navResources = await getNavLinks();
