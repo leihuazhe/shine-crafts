@@ -27,8 +27,20 @@ export const language2voices: Record<string, Voice[]> = {
     { value: 'en-US-RogerNeural', label: 'en-US-RogerNeural, Male', color: color },
   ],
 }
+//
 
+const placeholderCN = `Shine TTS 是一款文字生成语音的程序,支持生成中文和英文语音,输入文字后,点击生成按钮即可。请注意, 最大可支持字符数量为999个`;
+const placeholderJA = `
+ください
+おねがいします
+`;
+const placeholderEn = `Shine TTS is a text-to-speech program that supports generating voices in both Chinese and English. Simply input your text, click the generate button, and it will produce the speech. Please note that it supports a maximum of 999 words.`;
 
+export const langPlaceHolders: Record<string, string> = {
+  'Chinese': placeholderCN,
+  'Japanese': placeholderJA,
+  'English': placeholderEn,
+}
 
 export type Voice = {
   value: string,

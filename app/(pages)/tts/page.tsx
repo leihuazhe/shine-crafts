@@ -1,14 +1,13 @@
 "use client"
-import { language2voices, Voice } from "@/lib/lang_constants";
+import { language2voices, langPlaceHolders,  Voice } from "@/lib/lang_constants";
 import { useEffect, useState } from "react";
 import AudioPlayer, { RHAP_UI } from 'react-h5-audio-player';
 import '../../../styles/audio-player.css';
 import { DownloadIcon } from "lucide-react";
 import { Textarea } from "@/components/ui/textarea";
 import LangBox from "@/components/tts/lang-box";
-import VoiceOption from "@/components/tts/voice-option";
 import Button from "@/components/tts/button";
-import { toast, useToast } from "@/components/ui/use-toast";
+import { toast } from "@/components/ui/use-toast";
 import VoiceOptionV2 from "@/components/tts/voice-option-v2";
 
 const TTS = () => {
@@ -47,8 +46,8 @@ const TTS = () => {
     try {
       let data = text.trim();
       if (data === '') {
-        data = language === 'Chinese' ? placeholderCN : placeholderEn;
-        console.log('use default placehold to generate audio.')
+        data = langPlaceHolders[language];
+        console.log('use default placeholder to generate audio.')
       }
       const response = await fetch("/api/tts", {
         method: "POST",
@@ -90,7 +89,7 @@ const TTS = () => {
       <Textarea
         className="mt-4 h-2/5 bg-inherit text-xl placeholder:text-gray-500 dark:bg-black dark:text-white"
         text={text}
-        placeholder={language === 'Chinese' ? placeholderCN : placeholderEn}
+        placeholder={langPlaceHolders[language] }
         onChange={inputChangeHandler} />
       <Button loading={loading} onClick={clickHandler} />
       {audioUrl &&
@@ -116,6 +115,3 @@ const TTS = () => {
   );
 }
 export default TTS;
-
-const placeholderCN = `Shine TTS 是一款文字生成语音的程序,支持生成中文和英文语音,输入文字后,点击生成按钮即可。请注意, 最大可支持字符数量为999个`;
-const placeholderEn = `Shine TTS is a text-to-speech program that supports generating voices in both Chinese and English. Simply input your text, click the generate button, and it will produce the speech. Please note that it supports a maximum of 999 words.`;

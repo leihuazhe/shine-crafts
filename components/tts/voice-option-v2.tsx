@@ -82,8 +82,7 @@ const VoiceOptionV2 = ({
   return (
     <div className="mt-4 rounded-lg text-center text-xl">
       <Select
-        className="items-center text-center"
-        defaultValue={voice}
+        value={voice}
         options={voices}
         styles={colorStyle(theme == 'dark')}
         onChange={onChange}
