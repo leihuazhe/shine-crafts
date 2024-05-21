@@ -41,10 +41,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: {
       default: seo.title,
-      template: '%s | Huazhe Lei',
+      template: '%s | Shine Crafts',
     },
     description: seo.description,
-    siteName: 'Huazhe Lei',
+    siteName: 'Shine Crafts',
     locale: 'zh_CN',
     type: 'website',
     url: 'https://tts.317318.xyz',
@@ -94,7 +94,8 @@ export default async function RootLayout({ children }: RootLayoutProps) {
             sansFont.variable
           )}
         >
-          <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+          {/* <ThemeProvider attribute="class" defaultTheme="dark" enableSystem> */}
+          <ThemeProvider attribute="class" defaultTheme="dark">
             <SHeader navItems={navItems} user={user} />
             {children}
             {/* <TailwindIndicator /> */}
