@@ -6,6 +6,10 @@ Shine-Crafts is an open-source project designed to provide practical functionali
 
 ![Shine TTS](./public/opengraph-image.png)
 
+## Built with Next.js
+
+Shine-Crafts is built with Next.js, a popular React framework that simplifies server-side rendering and provides an efficient development experience.
+
 
 
 ## Getting Started
