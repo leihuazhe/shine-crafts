@@ -20,12 +20,16 @@ const dot = (color = 'transparent') => ({
   },
 });
 
+function toggle(isDark: boolean) {
+  // white,black
+  return isDark ? '#fff' : '#000';
+}
 
 function colorStyle(isDark: boolean): StylesConfig<Voice> {
   // system
-  const themeColor = isDark ? '#fff' : '#000';
+  const themeColor = toggle(isDark);
   return {
-    control: (styles) => ({ ...styles, backgroundColor: themeColor , textColor: themeColor }),
+    control: (styles) => ({ ...styles, backgroundColor: toggle(!isDark), textColor: themeColor }),
     option: (styles, { data, isDisabled, isFocused, isSelected }) => {
       const color = chroma(data.color);
       return {
@@ -56,7 +60,7 @@ function colorStyle(isDark: boolean): StylesConfig<Voice> {
         },
       };
     },
-    input: (styles) => ({ ...styles, ...dot()}),
+    input: (styles) => ({ ...styles, ...dot() }),
     placeholder: (styles) => ({ ...styles, ...dot('#ccc') }),
     singleValue: (styles, { data }) => ({ ...styles, color: themeColor, ...dot(themeColor) }),
     //Let the item to
