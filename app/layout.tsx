@@ -11,21 +11,56 @@ import { getNavLinksV2 } from "./links"
 import { getCurrentUser } from "@/lib/session"
 import { SiteFooter } from "@/components/site-footer"
 
+const seo = {
+  title: siteConfig.name,
+  description: siteConfig.description,
+}
+
 export const metadata: Metadata = {
   title: {
     default: siteConfig.name,
     template: `%s - ${siteConfig.name}`,
   },
   description: siteConfig.description,
-  // themeColor: [
-  //   { media: "(prefers-color-scheme: light)", color: "white" },
-  //   { media: "(prefers-color-scheme: dark)", color: "black" },
-  // ],
   icons: {
     icon: "/favicon.ico",
-    shortcut: "/favicon-16x16.png",
-    apple: "/apple-touch-icon.png",
   },
+  keywords: 'Ethan, Huazhe, Huazhe Lei, FullStack, Developer',
+  manifest: '/site.webmanifest',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  openGraph: {
+    title: {
+      default: seo.title,
+      template: '%s | Huazhe Lei',
+    },
+    description: seo.description,
+    siteName: 'Huazhe Lei',
+    locale: 'zh_CN',
+    type: 'website',
+    url: 'https://tts.317318.xyz',
+    images: [
+      {
+        url: 'https://tts.317318.xyz/opengraph-image.png',
+      },
+    ],
+  },
+  twitter: {
+    site: '@youjier',
+    creator: '@youjier',
+    card: 'summary_large_image',
+    title: seo.title,
+    description: seo.description,
+  }
 }
 
 export const viewport: Viewport = {
