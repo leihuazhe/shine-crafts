@@ -22,9 +22,10 @@ const dot = (color = 'transparent') => ({
 
 
 function colorStyle(isDark: boolean): StylesConfig<Voice> {
+  // system
   const themeColor = isDark ? '#fff' : '#000';
   return {
-    control: (styles) => ({ ...styles, backgroundColor: isDark ? 'black' : 'white' , textColor: themeColor }),
+    control: (styles) => ({ ...styles, backgroundColor: themeColor , textColor: themeColor }),
     option: (styles, { data, isDisabled, isFocused, isSelected }) => {
       const color = chroma(data.color);
       return {
