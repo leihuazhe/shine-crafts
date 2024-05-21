@@ -1,8 +1,10 @@
 # Shine-Crafts
-Shine-Crafts is an open-source project designed to provide practical functionalities for various applications. The primary feature currently implemented is Text-to-Speech (TTS), which allows users to convert text into spoken words seamlessly.↳
+Shine-Crafts is an open-source project designed to provide practical functionalities for various applications. The primary feature currently implemented is Text-to-Speech (TTS), which allows users to convert text into spoken words seamlessly.
 
 ## Features
 **Text-to-Speech (TTS)**: Convert any given text into natural-sounding speech.
+
+![Shine TTS](./public/opengraph-image.png)
 
 
 
