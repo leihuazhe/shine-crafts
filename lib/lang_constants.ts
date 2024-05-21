@@ -1,6 +1,20 @@
 const color = 'black'
+
+export const langMap :Record<string, string> = {
+  'cn':'Chinese',
+  'en':'English',
+  'ja':'Japanese',
+}
+
+export const langMap2 :Record<string, string> = {
+  'Chinese':'cn',
+  'English':'en',
+  'Japanese':'ja',
+}
+
+
 export const language2voices: Record<string, Voice[]> = {
-  'Chinese': [
+  'cn': [
     { value: 'zh-CN-XiaoxiaoNeural', label: 'zh-CN-XiaoxiaoNeural, Female', color: color },
     { value: 'zh-CN-XiaoyiNeural', label: 'zh-CN-XiaoyiNeural, Female', color: color },
     { value: 'zh-CN-YunjianNeural', label: 'zh-CN-YunjianNeural, Male', color: color },
@@ -8,11 +22,11 @@ export const language2voices: Record<string, Voice[]> = {
     { value: 'zh-CN-YunxiaNeural', label: 'zh-CN-YunxiaNeural, Male', color: color },
     { value: 'zh-CN-YunyangNeural', label: 'zh-CN-YunyangNeural, Male', color: color },
   ],
-  'Japanese': [
+  'ja': [
     { value: 'ja-JP-NanamiNeural', label: 'ja-JP-NanamiNeural, Female', color: color },
     { value: 'ja-JP-KeitaNeural', label: 'ja-JP-KeitaNeural, Female', color: color },
   ],
-  'English': [
+  'en': [
     { value: 'en-US-EmmaNeural', label: 'en-US-EmmaNeural, Female', color: color },
     { value: 'en-US-AnaNeural', label: 'en-US-AnaNeural, Female', color: color },
     { value: 'en-US-AriaNeural', label: 'en-US-AriaNeural, Female', color: color },
@@ -37,9 +51,9 @@ const placeholderJA = `
 const placeholderEn = `Shine TTS is a text-to-speech program that supports generating voices in both Chinese and English. Simply input your text, click the generate button, and it will produce the speech. Please note that it supports a maximum of 999 words.`;
 
 export const langPlaceHolders: Record<string, string> = {
-  'Chinese': placeholderCN,
-  'Japanese': placeholderJA,
-  'English': placeholderEn,
+  'cn': placeholderCN,
+  'ja': placeholderJA,
+  'en': placeholderEn,
 }
 
 export type Voice = {

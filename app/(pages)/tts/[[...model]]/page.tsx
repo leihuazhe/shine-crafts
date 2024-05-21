@@ -1,29 +1,35 @@
 "use client"
-import { language2voices, langPlaceHolders,  Voice } from "@/lib/lang_constants";
+import { language2voices, langPlaceHolders, Voice } from "@/lib/lang_constants";
 import { useEffect, useState } from "react";
 import AudioPlayer, { RHAP_UI } from 'react-h5-audio-player';
-import '../../../styles/audio-player.css';
+import '../../../../styles/audio-player.css';
 import { DownloadIcon } from "lucide-react";
 import { Textarea } from "@/components/ui/textarea";
 import LangBox from "@/components/tts/lang-box";
 import Button from "@/components/tts/button";
 import { toast } from "@/components/ui/use-toast";
 import VoiceOptionV2 from "@/components/tts/voice-option-v2";
+import { useParams, useRouter } from "next/navigation";
 
-const TTS = () => {
+export default function TTS({params}: { params: { model?: string[] } }) {
   // why is it loading twice? NOT: why is loading this twice.
-  console.log("load the tts");
-  const [language, setLanguage] = useState('English');
-  const [voice, setVoice] = useState<Voice[]>(language2voices[language]);
+  console.log("load the tts", params.model);
+  const router = useRouter()
+
+  const lang = params.model?.[0] ?? 'en';
+
+  //  const [language, setLanguage] = useState(langMap[lang]);
+  const [voice, setVoice] = useState<Voice[]>(language2voices[lang]);
   const [text, setText] = useState('');
   const [loading, setLoading] = useState(false);
   //chunk
   const [audioUrl, setAudioUrl] = useState('');
 
+
   useEffect(() => {
-    setVoice([language2voices[language][0]]);
+    // setVoice([language2voices[language][0]]);
     setAudioUrl('');
-  }, [language]);
+  }, [lang]);
 
 
   const selectChangeHandler = (newVoice: Voice) => {
@@ -46,7 +52,7 @@ const TTS = () => {
     try {
       let data = text.trim();
       if (data === '') {
-        data = langPlaceHolders[language];
+        data = langPlaceHolders[lang];
         console.log('use default placeholder to generate audio.')
       }
       const response = await fetch("/api/tts", {
@@ -80,16 +86,21 @@ const TTS = () => {
       variant: "destructive",
     })
   }
+
+  function onPush(param: string) {
+    router.push(`/tts/${param}`)
+  }
+
   return (
     <main className="h-screen w-full p-8 text-base text-lime-700 md:mx-auto md:max-w-5xl">
-      <LangBox language={language} setLanguage={setLanguage} />
-      <VoiceOptionV2 voices={language2voices[language]}
+      <LangBox language={lang} setLanguage={(arg) => onPush(arg)} />
+      <VoiceOptionV2 voices={language2voices[lang]}
         voice={voice[0]}
         onChange={(value) => setVoice([value])} />
       <Textarea
         className="mt-4 h-2/5 bg-inherit text-xl placeholder:text-gray-500 dark:bg-black dark:text-white"
         text={text}
-        placeholder={langPlaceHolders[language] }
+        placeholder={langPlaceHolders[lang]}
         onChange={inputChangeHandler} />
       <Button loading={loading} onClick={clickHandler} />
       {audioUrl &&
@@ -114,4 +125,3 @@ const TTS = () => {
     </main>
   );
 }
-export default TTS;

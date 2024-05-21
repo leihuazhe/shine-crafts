@@ -8,19 +8,19 @@ const LangBox = ({ language, setLanguage }: { language: string, setLanguage: (ar
       <RadioGroup className="flex flex-row" defaultValue={language} onValueChange={(value: any) => setLanguage(value)}>
         <div className="m-1 flex items-center space-x-2">
           <RadioGroupItem
-            value="Chinese"
+            value="cn"
             id="r1" />
           <Label className="text-xl" htmlFor="r1">Chinese</Label>
         </div>
         <div className="m-1 flex items-center space-x-2">
           <RadioGroupItem
-            value="Japanese"
+            value="ja"
             id="r1" />
           <Label className="text-xl" htmlFor="r1">Japanese</Label>
         </div>
         <div className="m-1 flex items-center space-x-2">
           <RadioGroupItem
-            value="English"
+            value="en"
             id="r2" />
           <Label htmlFor="r2" className="text-xl">English</Label>
         </div>
