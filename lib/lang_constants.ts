@@ -1,18 +1,5 @@
 const color = 'black'
 
-export const langMap :Record<string, string> = {
-  'cn':'Chinese',
-  'en':'English',
-  'ja':'Japanese',
-}
-
-export const langMap2 :Record<string, string> = {
-  'Chinese':'cn',
-  'English':'en',
-  'Japanese':'ja',
-}
-
-
 export const language2voices: Record<string, Voice[]> = {
   'cn': [
     { value: 'zh-CN-XiaoxiaoNeural', label: 'zh-CN-XiaoxiaoNeural, Female', color: color },
@@ -24,7 +11,7 @@ export const language2voices: Record<string, Voice[]> = {
   ],
   'ja': [
     { value: 'ja-JP-NanamiNeural', label: 'ja-JP-NanamiNeural, Female', color: color },
-    { value: 'ja-JP-KeitaNeural', label: 'ja-JP-KeitaNeural, Female', color: color },
+    { value: 'ja-JP-KeitaNeural', label: 'ja-JP-KeitaNeural, Male', color: color },
   ],
   'en': [
     { value: 'en-US-EmmaNeural', label: 'en-US-EmmaNeural, Female', color: color },
