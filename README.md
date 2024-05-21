@@ -10,7 +10,7 @@ Shine-Crafts is an open-source project designed to provide practical functionali
 
 ## Getting Started
 
-Feel free to check
+Feel free to checking it out: 
 - https://tts.317318.xyz/tts
 
 ## Contributing
