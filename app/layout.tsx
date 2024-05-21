@@ -1,5 +1,5 @@
 import "@/styles/globals.css"
-import { Metadata } from "next"
+import { Metadata, Viewport } from "next"
 
 import { siteConfig } from "@/config/site"
 import { sansFont } from "@/lib/fonts"
@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils"
 import { Toaster } from "@/components/ui/toaster"
 import { ThemeProvider } from "@/components/theme-provider"
 import { SHeader } from "@/components/layout/header"
-import getNavLinks, { getNavLinksV2 } from "./links"
+import { getNavLinksV2 } from "./links"
 import { getCurrentUser } from "@/lib/session"
 import { SiteFooter } from "@/components/site-footer"
 
@@ -17,15 +17,22 @@ export const metadata: Metadata = {
     template: `%s - ${siteConfig.name}`,
   },
   description: siteConfig.description,
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "white" },
-    { media: "(prefers-color-scheme: dark)", color: "black" },
-  ],
+  // themeColor: [
+  //   { media: "(prefers-color-scheme: light)", color: "white" },
+  //   { media: "(prefers-color-scheme: dark)", color: "black" },
+  // ],
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon-16x16.png",
     apple: "/apple-touch-icon.png",
   },
+}
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "white" },
+    { media: "(prefers-color-scheme: dark)", color: "black" },
+  ],
 }
 
 interface RootLayoutProps {

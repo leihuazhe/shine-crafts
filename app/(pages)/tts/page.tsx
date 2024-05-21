@@ -9,13 +9,11 @@ import LangBox from "@/components/tts/lang-box";
 import VoiceOption from "@/components/tts/voice-option";
 import Button from "@/components/tts/button";
 import { toast, useToast } from "@/components/ui/use-toast";
+import VoiceOptionV2 from "@/components/tts/voice-option-v2";
 
 const TTS = () => {
   // why is it loading twice? NOT: why is loading this twice.
   console.log("load the tts");
-
-  const { toasts } = useToast()
-
   const [language, setLanguage] = useState('English');
   const [voice, setVoice] = useState<Voice[]>(language2voices[language]);
   const [text, setText] = useState('');
@@ -63,7 +61,6 @@ const TTS = () => {
         }),
       });
       if (!response.ok) {
-        console.log("-------------------------", response.statusText)
         throw new Error("failed to generate audio: " + response.statusText);
       }
       const blob = await response.blob();
@@ -87,10 +84,9 @@ const TTS = () => {
   return (
     <main className="h-screen w-full p-8 text-base text-lime-700 md:mx-auto md:max-w-5xl">
       <LangBox language={language} setLanguage={setLanguage} />
-      <VoiceOption voices={language2voices[language]}
+      <VoiceOptionV2 voices={language2voices[language]}
         voice={voice[0]}
-        onChange={(value) => setVoice([value])}
-      ></VoiceOption>
+        onChange={(value) => setVoice([value])} />
       <Textarea
         className="mt-4 h-2/5 bg-inherit text-xl placeholder:text-gray-500 dark:bg-black dark:text-white"
         text={text}

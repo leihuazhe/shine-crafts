@@ -14,6 +14,12 @@ const LangBox = ({ language, setLanguage }: { language: string, setLanguage: (ar
         </div>
         <div className="m-1 flex items-center space-x-2">
           <RadioGroupItem
+            value="Japanese"
+            id="r1" />
+          <Label className="text-xl" htmlFor="r1">Japanese</Label>
+        </div>
+        <div className="m-1 flex items-center space-x-2">
+          <RadioGroupItem
             value="English"
             id="r2" />
           <Label htmlFor="r2" className="text-xl">English</Label>
