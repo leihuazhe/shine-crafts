@@ -17,7 +17,8 @@ export default function Button({ loading, onClick }: {
       type="submit"
       onClick={onClick}
       disabled={loading}
-      className={`btn_v2 my-4 inline-flex h-12 w-full items-center justify-center rounded  bg-zinc-200  px-4 py-1.5 text-base font-semibold leading-7 ring-1
+      className={`btn_v2 my-5 inline-flex h-12 w-full items-center justify-center rounded
+                bg-zinc-300  px-4 py-1.5 text-base font-semibold leading-7 ring-1
           ring-transparent transition-all duration-150 dark:text-black md:py-2${loading ? "" : ""}`}
     >
       <svg height="24" width="24" fill="#3c4772" viewBox="0 0 24 24" data-name="Layer 1" id="Layer_1" className={`${loading ? "animate-spin" : ""} mr-4`}>
