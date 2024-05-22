@@ -44,7 +44,7 @@ export function SiteFooter() {
             {/* <div className="w-full px-4 md:w-4/12"> */}
             <div className="w-full px-4 ">
               <div className="mb-2 text-center md:mb-0 md:text-center">
-                <a href="https://www.creative-tim.com/?ref=npr-footeradmin" target="_blank" className="py-1 text-center text-sm font-semibold text-white/60 md:text-left" rel="noreferrer">
+                <a href="https://www.317318.xyz" target="_blank" className="py-1 text-center text-sm font-semibold text-white/60 md:text-left" rel="noreferrer">
                   Copyright © 2024 Shine Crafts All rights reserved.
                 </a>
               </div>
