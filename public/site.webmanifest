@@ -1,0 +1,16 @@
+{
+  "name": "Shine Crafts",
+  "short_name": "ShineCrafts",
+  "description": "A Smart Text to Speech Web Tool and Platform.",
+  "start_url": "/tts",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "/images/logo-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ]
+}

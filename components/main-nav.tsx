@@ -27,25 +27,25 @@ export function MainNav({ items, navItems }: MainNavProps) {
             {items?.map(
               (item, index) =>
                 item.href && (
-                  <>
+                  <section key={item.title}>
                     <div className={cn(
-                          "ml-2 flex items-center text-2xl	 text-white sm:text-lg",
-                          item.disabled && "cursor-not-allowed opacity-80"
-                        )}>
+                      "ml-2 flex items-center text-2xl	 text-white sm:text-lg",
+                      item.disabled && "cursor-not-allowed opacity-80"
+                    )}>
                       <Icon icon={item.icon} />
                       <Link
                         key={index}
                         href={item.href}
                         className="ml-2"
-                        // className={cn(
-                        //   "flex items-center text-2xl	 text-white sm:text-lg",
-                        //   item.disabled && "cursor-not-allowed opacity-80"
-                        // )}
+                      // className={cn(
+                      //   "flex items-center text-2xl	 text-white sm:text-lg",
+                      //   item.disabled && "cursor-not-allowed opacity-80"
+                      // )}
                       >
                         {item.title}
                       </Link>
                     </div>
-                  </>
+                  </section>
                 )
             )}
           </nav>

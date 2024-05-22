@@ -14,6 +14,8 @@ const TTSObject = z.object({
 const tts = new MsEdgeTTS();
 const rootPath = path.resolve(process.cwd());
 
+console.log('init tts apis')
+
 export async function POST(req: NextRequest) {
 
   try {
