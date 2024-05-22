@@ -7,15 +7,15 @@ const nextConfig = {
   images: {
     domains: ['cos.codefe.top'],
   },
-  // async redirects() {
-  //   return [
-  //     {
-  //       source: '/',
-  //       destination: '/tts',
-  //       permanent: true,
-  //     },
-  //   ]
-  // },
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/tts',
+        permanent: true,
+      },
+    ]
+  },
 }
 
 export default nextConfig
