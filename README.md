@@ -14,7 +14,7 @@ Shine-Crafts is built with Next.js, a popular React framework that simplifies se
 
 ## Getting Started
 
-Feel free to checking it out: 
+Feel free to check it out: 
 - https://tts.317318.xyz/tts
 
 ## Contributing
