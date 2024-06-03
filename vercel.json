@@ -1,4 +1,4 @@
 {
-  "regions": ["sin1"],
-  "functionFailoverRegions": ["kix1", "hnd1"]
+  "regions": [],
+  "functionFailoverRegions": []
 }
