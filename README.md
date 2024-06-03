@@ -29,7 +29,6 @@ Open a pull request.
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Contact
-
-If you have any questions or suggestions, feel free to contact us at maple@317318.xyz
+If you have any questions or suggestions, feel free to contact us at hi@317318.xyz
 We hope you find Shine-Crafts useful and look forward to your feedback and contributions!
 Make sure to customize the repository URL and contact information to suit your specific details. If PPM refers to a specific package management tool or framework, please provide the relevant link or additional details.
