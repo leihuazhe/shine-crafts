@@ -14,10 +14,10 @@ export const language2voices: Record<string, Voice[]> = {
     { value: 'ja-JP-KeitaNeural', label: 'ja-JP-KeitaNeural, Male', color: color },
   ],
   'en': [
+    { value: 'en-US-AvaNeural', label: 'en-US-AvaNeural, Female', color: color },
     { value: 'en-US-EmmaNeural', label: 'en-US-EmmaNeural, Female', color: color },
     { value: 'en-US-AnaNeural', label: 'en-US-AnaNeural, Female', color: color },
     { value: 'en-US-AriaNeural', label: 'en-US-AriaNeural, Female', color: color },
-    { value: 'en-US-AvaNeural', label: 'en-US-AvaNeural, Female', color: color },
     { value: 'en-US-JennyNeural', label: 'en-US-JennyNeural, Female', color: color },
     { value: 'en-US-MichelleNeural', label: 'en-US-MichelleNeural, Female', color: color },
     { value: 'en-US-AndrewNeural', label: 'en-US-AndrewNeural, Male', color: color },
